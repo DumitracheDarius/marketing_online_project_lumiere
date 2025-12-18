@@ -1,0 +1,79 @@
+Cerințele pentru proiect sunt următoarele:
+
+
+
+Realizarea unui site cu design mobile first (optimizat pentru afișare pe dispozitive mobile), utilizând orice platformă de creare de site-uri, preferabil un CMS (ex: WordPress).
+
+
+
+Tema proiectului este aleasă liber de către studenți, în funcție de interesele și creativitatea fiecăruia.
+
+
+
+Site-ul trebuie să conțină minimum 6 pagini.
+
+
+
+Integrarea a cel puțin 5 imagini prelucrate.
+
+
+
+Toate imaginile folosite vor fi prelucrate personal folosind tehnici precum Liquify, instrumente de corecție, ajustare a culorilor sau alte metode de editare grafică.
+
+
+
+Site-ul trebuie să includă o metodă de monetizare dintre cele discutate la seminar (ex: one-time payments, subscriptions, recurrent payments, paywalls etc.).
+
+
+
+Proiectul poate fi realizat individual sau în echipe de maximum 3 persoane. Pentru fiecare membru suplimentar din echipă, se vor adăuga 2 pagini și 1 imagine la cerințele minime.
+
+
+
+La final, linkul către proiect va fi transmis pe platformă și va fi însoțit de următoarele informații, respectând structura:
+
+
+
+Titlu / Subiect e-mail:
+
+Proiect <Facultate> <An> <Grupa> <Materia>
+
+(înlocuiți elementele dintre <> cu datele voastre)
+
+
+
+Exemplu:
+
+Proiect Marketing anul 1 17xx Informatica Economica
+
+
+
+Conținutul mesajului / postării trebuie să includă datele voastre de identificare:
+
+
+
+Nume și prenume (plus inițiala tatălui dacă există colegi cu același nume)
+
+
+
+Facultatea
+
+
+
+Anul de studiu
+
+
+
+Grupa și seria
+
+
+
+Termen de predare: până la 15 decembrie 2025.
+
+
+
+NOTĂ privind metoda de monetizare: Metoda de monetizare acceptată pentru proiect poate fi realizată sub formă de mockup (prototip). Acest mockup trebuie să prezinte interfața și fluxul de plată (buton de plată, pagină de checkout, confirmare), dar nu va conduce la efectuarea efectivă a plății și nu va fi conectat la niciun procesator real de plăți. Nu este necesară înregistrarea la niciun serviciu de plăți sau crearea de conturi reale.
+
+
+
+Nu e nevoie sa il facem in wordpress, putem folosi cod, am nevoie de proiect final. Tema website ului poate fi un site de vanzare de haine, inventeaza un brand specializat in vanzarea de hanorace moderne si premium dar care sunt accesibile la pret, sunt speciale doar pentru femei.
