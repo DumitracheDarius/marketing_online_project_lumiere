@@ -44,7 +44,7 @@ export default function Terms() {
 
             <h2 className="text-foreground">6. Limitation of liability</h2>
             <p>
-              In no event shall Lumière, nor any of its officers, directors and employees, including founders Radu Maria-Cristina and Porumboiu Diana, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. 
+              In no event shall Lumière, nor any of its officers, directors and employees, including founders Radu Maria-Cristina and Porumboiu Silvia-Diana, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.
             </p>
             
             <h2 className="text-foreground">7. Governing Law & Jurisdiction</h2>

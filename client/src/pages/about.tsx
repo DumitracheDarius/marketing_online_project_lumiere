@@ -46,7 +46,7 @@ export default function About() {
             <div className="max-w-3xl mx-auto space-y-8 text-center">
               <h2 className="font-heading text-3xl font-medium">Meet the Founders</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                LUMIÈRE was founded by two friends, Radu Maria-Cristina and Porumboiu Diana, who share a passion for design and a commitment to quality. Their vision was to create a brand that offers timeless pieces that are both beautiful and functional.
+                LUMIÈRE was founded by two friends, Radu Maria-Cristina and Porumboiu Silvia-Diana, who share a passion for design and a commitment to quality. Their vision was to create a brand that offers timeless pieces that are both beautiful and functional.
               </p>
             </div>
           </div>
