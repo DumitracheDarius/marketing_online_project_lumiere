@@ -39,18 +39,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
-        {/* Image Grid */}
-        <section className="container px-4 md:px-6 pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="aspect-square bg-secondary overflow-hidden">
-              <img src={assets.texture} alt="Process" className="w-full h-full object-cover" />
-            </div>
-            <div className="aspect-square bg-secondary overflow-hidden">
-              <img src={assets.hero} alt="Result" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </section>
       </div>
     </Layout>
   );

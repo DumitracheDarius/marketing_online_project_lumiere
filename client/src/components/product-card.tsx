@@ -6,7 +6,7 @@ interface ProductCardProps {
     id: number;
     name: string;
     price: number;
-    image: string;
+    images: string[];
     category: string;
   };
 }
@@ -19,7 +19,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            src={product.image}
+            src={product.images[0]}
             alt={product.name}
             className="h-full w-full object-cover object-center"
           />

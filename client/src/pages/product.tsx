@@ -15,7 +15,7 @@ export default function Product() {
   if (!match) return <NotFound />;
 
   const productId = parseInt(params.id);
-  const product = products.find((p) => p.id === productId) || products.find(p => p.id === productId - 10); // Handle duplicated IDs from shop
+  const product = products.find((p) => p.id === productId);
 
   if (!product) return <NotFound />;
 
@@ -45,18 +45,17 @@ export default function Product() {
           <div className="space-y-4">
             <div className="aspect-[3/4] bg-secondary w-full overflow-hidden">
               <img 
-                src={product.image} 
+                src={product.images[0]} 
                 alt={product.name} 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-secondary overflow-hidden">
-                <img src={assets.texture} alt="Detail" className="w-full h-full object-cover" />
-              </div>
-              <div className="aspect-square bg-secondary overflow-hidden">
-                <img src={product.image} alt="Detail" className="w-full h-full object-cover scale-150" />
-              </div>
+            <div className="grid grid-cols-4 gap-4">
+              {product.images.map((image, index) => (
+                <div key={index} className="aspect-square bg-secondary overflow-hidden">
+                  <img src={image} alt={`${product.name} detail ${index + 1}`} className="w-full h-full object-cover" />
+                </div>
+              ))}
             </div>
           </div>
 

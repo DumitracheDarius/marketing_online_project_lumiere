@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 3);
+  const featuredProducts = products.slice(0, 4);
 
   return (
     <Layout>
@@ -56,7 +56,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-square md:aspect-[4/5] overflow-hidden">
               <img 
-                src={assets.texture} 
+                src={assets.studio} 
                 alt="Fabric Detail" 
                 className="absolute inset-0 h-full w-full object-cover"
               />
