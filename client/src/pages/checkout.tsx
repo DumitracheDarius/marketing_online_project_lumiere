@@ -29,11 +29,13 @@ export default function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [cartTotal, setCartTotal] = useState(0);
+  const [cartItems, setCartItems] = useState<any[]>([]);
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("cart") || "[]");
     const total = items.reduce((sum: number, item: any) => sum + item.price, 0);
     setCartTotal(total);
+    setCartItems(items);
   }, []);
 
   const form = useForm<z.infer<typeof checkoutSchema>>({
@@ -248,6 +250,20 @@ export default function Checkout() {
           <div className="hidden lg:block bg-secondary/20 p-8 h-fit">
              <h3 className="font-medium text-lg mb-6">Order Summary</h3>
              <div className="space-y-4">
+                {cartItems.map((item) => (
+                    <div key={item.cartId} className="flex gap-4">
+                        <div className="h-20 w-16 bg-secondary flex-shrink-0 overflow-hidden">
+                            <img src={item.images[0]} alt={item.name} className="h-full w-full object-cover" />
+                        </div>
+                        <div className="flex-1 flex justify-between">
+                            <div>
+                                <h4 className="font-medium text-sm">{item.name}</h4>
+                                <p className="text-xs text-muted-foreground mt-1">Size: {item.size}</p>
+                            </div>
+                            <p className="text-sm font-medium">${item.price}</p>
+                        </div>
+                    </div>
+                ))}
                <div className="flex justify-between font-medium text-xl pt-4 border-t">
                  <span>Total</span>
                  <span>${cartTotal}</span>

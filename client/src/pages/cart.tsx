@@ -16,6 +16,7 @@ export default function Cart() {
     const newItems = cartItems.filter(item => item.cartId !== cartId);
     setCartItems(newItems);
     localStorage.setItem("cart", JSON.stringify(newItems));
+    window.dispatchEvent(new CustomEvent('cart-updated'));
   };
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price, 0);
@@ -38,7 +39,7 @@ export default function Cart() {
               {cartItems.map((item) => (
                 <div key={item.cartId} className="flex gap-6 py-6 border-b">
                   <div className="h-24 w-20 bg-secondary flex-shrink-0 overflow-hidden">
-                    <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+                    <img src={item.images[0]} alt={item.name} className="h-full w-full object-cover" />
                   </div>
                   <div className="flex-1 flex justify-between">
                     <div>

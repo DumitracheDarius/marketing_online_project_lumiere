@@ -1,12 +1,28 @@
 import { Link, useLocation } from "wouter";
 import { ShoppingBag, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const updateCartCount = () => {
+      const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      setCartCount(cart.length);
+    };
+
+    updateCartCount();
+
+    window.addEventListener("cart-updated", updateCartCount);
+
+    return () => {
+      window.removeEventListener("cart-updated", updateCartCount);
+    };
+  }, []);
 
   const links = [
     { href: "/", label: "Home" },
@@ -70,6 +86,11 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Link href="/cart">
             <Button variant="ghost" size="icon" className="relative">
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                  {cartCount}
+                </span>
+              )}
               <ShoppingBag className="h-5 w-5" />
               <span className="sr-only">Cart</span>
             </Button>
@@ -108,6 +129,7 @@ export function Footer() {
               <li><Link href="/about">Our Story</Link></li>
               <li><Link href="/about">Sustainability</Link></li>
               <li><Link href="/about">Contact</Link></li>
+              <li><Link href="/terms">Terms & Conditions</Link></li>
             </ul>
           </div>
 
