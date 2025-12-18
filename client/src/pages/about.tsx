@@ -33,8 +33,8 @@ export default function About() {
                 substantial, looked elevated, and could be worn from a coffee run to a casual dinner.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our design process is reductive. We strip away the unnecessary—logos, strings, excessive 
-                hardware—to focus on what matters: the fabric and the fit.
+                Our design process is reductive. We strip away the unnecessary logos, strings, excessive
+                hardware to focus on what matters: the fabric and the fit.
               </p>
             </div>
           </div>
